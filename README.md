@@ -37,7 +37,7 @@
 </details>
 
 [`♻️ App Termux`](https://f-droid.org/es/packages/com.termux/)
-### 🌸 INSTALACIÓN AUTOMÁTICA 🌸
+### 🌸 АВТОМАТИЧЕСКАЯ УСТАНОВКА 🌸
 <a href="https://youtu.be/tzM0f_N8BII">
 <img src="https://img.shields.io/badge/Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Tutorial"> </a>
 
@@ -45,7 +45,7 @@
 termux-setup-storage
 ```
 ```bash
-apt update -y && yes | apt upgrade && pkg install -y bash wget && wget -O - https://raw.githubusercontent.com/GataNina-Li/GataBotLite-MD/master/gatalite.sh | bash
+apt update -y && yes | apt upgrade && pkg install -y bash wget && wget -O - https://raw.githubusercontent.com/mihas35/Gomer/master/gatalite.sh | bash
 ```
 #### В СЛУЧАЕ, ЕСЛИ ВЫ ХОТИТЕ ИСПОЛЬЗОВАТЬ ЭТОТ МЕТОД, ВЫ ДОЛЖНЫ ОТРЕДАКТИРОВАТЬ (Перед форком)
 - [`Repositorio`](https://github.com/mihas35/Gomer/blob/14da583cddcf76285988dadb76cfc77f9373d8a8/gatalite.sh#L155)
