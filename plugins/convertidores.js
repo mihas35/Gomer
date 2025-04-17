@@ -11,7 +11,7 @@ let handler = async (m, { conn, command, usedPrefix, args, text }) => {
 let q, mime, media, out, caption
 
 const isCommand1 = /^(to(img|image)?|img|jpe?g|png)\b$/i.test(command)
-const isCommand2 = /^(tourl|url|upload)\b$/i.test(command)
+const isCommand2 = /^(закачать|url|upload)\b$/i.test(command)
 const isCommand3 = /^(to(video|mp4)?|mp4)\b$/i.test(command)
 const isCommand4 = /^(to(gif|gifau)?|gif|gifau)\b$/i.test(command)
 const isCommand5 = /^(to(vn|ptt|audio|mp3)?|mp3)\b$/i.test(command)
@@ -36,7 +36,7 @@ console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗
 console.log(e)} 
 break  
 
-// CÓDIGO ADAPTADO POR https://github.com/Azami19   
+// КОД АДАПТИРОВАН https://github.com/Azami19   
 case isCommand2:    
 q = m.quoted ? m.quoted : m
 mime = (q.msg || q).mimetype || ''
@@ -46,7 +46,7 @@ media = await q.download()
 const urlRegex = /(https?:\/\/.*\.(?:png|jpe?g|webp))/i
 let isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
 let link = await (isTele ? uploadImage : uploadFile)(media) 
-//Resultado en MG o KB
+//Результат в MG o KB
 const bytes = media.length;
 let result
 const kilobytes = bytes / 1024;
@@ -244,19 +244,19 @@ let list = ''
 filters.forEach((filter, index) => {
 list += `*\`[${index + 1}]\`* (${filter.title})\n`
 })   
-let filterList = `*Para convertir la imagen a una ilusión de patrones:*
+let filterList = `*Преобразование изображения в иллюзию узора:*
 
-> *Agregando un enlace de imagen:*
+> *Добавление ссылки на изображение:*
 *${usedPrefix + command}* [enlace] | [filtro] | [consulta] *(opcional)*
-> *Ejemplo:*
+> *Пример:*
 *${usedPrefix + command}* https://telegra.ph/file/587c0111afe97997ea0d8.jpg | 3 | Color verde
 
-> *Respondiendo a una imagen:*
+> *Реакция на изображение:*
 *${usedPrefix + command}* [filtro] | [consulta] *(opcional)*
-> *Ejemplo:*
+> *Пример:*
 *${usedPrefix + command}* 3 | Color verde
 
-\`Elige un filtro usando el número correspondiente\`\n
+\`Выберите фильтр по соответствующему номеру\`\n
 ${list.trim()}
 `
 if (!text) return m.reply(filterList)  
@@ -273,9 +273,9 @@ prompt = text.split("|").length === 2 ? parts[1] ? parts[1].trim() : "" : ""
 }
 try {
 if (!url && !m.quoted) {
-return m.reply("Debe agregar un enlace de imagen o responder a una imagen.")
+return m.reply("Вы должны добавить ссылку на изображение или ответить на него.")
 }
-if (!filterid) return m.reply('> *Falta seleccionar un filtro!!*\n\n' + filterList)   
+if (!filterid) return m.reply('> *Фильтр нужно выбрать!!*\n\n' + filterList)   
 const selectedFilterIndex = parseInt(filterid) - 1
 if (isNaN(selectedFilterIndex) || selectedFilterIndex < 0 || selectedFilterIndex >= filters.length) {
 return m.reply(`El número \`'${filterid}'\` no corresponde a ningún filtro disponible.`)
@@ -284,7 +284,7 @@ const selectedFilterId = filters[selectedFilterIndex].id || Math.floor(Math.rand
 let promptText = ''
 if (selectedFilterId === "pattern001") {
 if (!prompt) {
-return m.reply("Para este filtro es obligatorio agregar una consulta, vuelva a intentarlo.")
+return m.reply("Для этого фильтра обязательно нужно добавить запрос, пожалуйста, попробуйте еще раз.")
 }
 promptText = prompt
 } else {
@@ -302,9 +302,9 @@ bufferImg = await response.buffer()
 } else if (isUrlValid) {
 let response = await fetch(APIs.skizo.url + `illusion?apikey=${APIs.skizo.key}&url=${url.trim()}&filterid=${selectedFilterId}&prompt=${promptText}`)
 bufferImg = await response.buffer()
-} else return m.reply("La URL proporcionada no es un enlace de imagen válido o no se ha respondido a una imagen.")
+} else return m.reply("Предоставленный URL-адрес не является действительной ссылкой на изображение или на изображение не был дан ответ.")
    
-await conn.sendMessage(m.chat, { image: bufferImg, caption: `🪄 *Efecto:* ${filters[selectedFilterIndex].title}\n📌 *Prompt:* ${promptText || 'Ninguno'}` }, { quoted: m })
+await conn.sendMessage(m.chat, { image: bufferImg, caption: `🪄 *Эффект:* ${filters[selectedFilterIndex].title}\n📌 *Подсказывать:* ${promptText || 'Никакой'}` }, { quoted: m })
 } catch (e) {
 await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command)
 console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`)
@@ -314,5 +314,5 @@ break
 
 }}
 
-handler.command = /^(to(img|image)?|img|jpe?g|png|tourl|url|upload|to(video|mp4)?|mp4|to(gif|gifau)?|gif|gifau|to(vn|ptt|audio|mp3)?|mp3|to(voice|tts)?|tts|toanime|toillusion|toilusi(ó|o)?n)\b$/i
+handler.command = /^(to(img|image)?|img|jpe?g|png|закачать|url|upload|to(video|mp4)?|mp4|to(gif|gifau)?|gif|gifau|to(vn|ptt|audio|mp3)?|mp3|to(voice|tts)?|tts|toanime|toillusion|toilusi(ó|o)?n)\b$/i
 export default handler

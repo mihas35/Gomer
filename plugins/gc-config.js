@@ -4,8 +4,8 @@ let isClose = { // Switch Case Like :v
 'close': 'announcement',
 'abierto': 'not_announcement',
 'cerrado': 'announcement',
-'открыта': 'not_announcement',
-'закрыта': 'announcement',
+'открыл': 'not_announcement',
+'закрыл': 'announcement',
 }[(args[0] || '')]
 if (isClose === undefined)
 throw `
@@ -20,7 +20,7 @@ await conn.groupSettingUpdate(m.chat, isClose)
 }
 handler.help = ['group open / close', 'группа открыта / закрыта']
 handler.tags = ['group']
-handler.command = /^(группа)$/i
+handler.command = /^(группу)$/i
 handler.admin = true
 handler.botAdmin = true
 export default handler
