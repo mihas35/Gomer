@@ -90,10 +90,10 @@ global.country = '' //agrega tú país ejemplo: 🇪🇨
 
 global.vs = '1.4.0'
 global.vsJB = '5.0 (beta)'
-global.gt = '🇮 🇳 🇫 🇮 🇳 🇮 🇽'
+global.gt = '𝔾𝕠𝕞𝕖𝕣'
 
-global.wm = '🇮 🇳 🇫 🇮 🇳 🇮 🇽 : 🇮 🇳 🇫 🇮 🇳 🇮 🇽'
-global.igfg = '🇮 🇳 🇫 🇮 🇳 🇮 🇽'
+global.wm = '𝔾𝕠𝕞𝕖𝕣'
+global.igfg = '𝔾𝕠𝕞𝕖𝕣'
 global.nomorown = owner[0][0]
 
 global.htki = '*⭑•̩̩͙⊱•••• ☪*'
