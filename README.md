@@ -1,5 +1,5 @@
 <p align="center"> 
-<img src="https://qu.ax/eLDGQ.png" alt="◉𝔾𝕠𝕞𝕖𝕣◉" width="500" height="500" />
+<img src="https://qu.ax/eLDGQ.png" alt="Gomer" width="500" height="500" />
 </p>
 <p align="center">
 <a href="https://github.com/mihas35/Gomer"><img title="◉𝔾𝕠𝕞𝕖𝕣◉" src="https://img.shields.io/badge/🌸 ЭТО ЯВЛЯЕТСЯ УПРОЩЕННОЙ ВЕРСИЕЙ ◉𝔾𝕠𝕞𝕖𝕣◉ 🌸 -red?colorA=%233CCED8&colorB=%233CCED8&style=for-the-badge"></a>
