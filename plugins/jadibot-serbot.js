@@ -1,12 +1,12 @@
-/*⚠ PROHIBIDO EDITAR ⚠
-Este codigo fue modificado, adaptado y mejorado por
-- ReyEndymion >> https://github.com/ReyEndymion
-El codigo de este archivo esta inspirado en el codigo original de:
-- Aiden_NotLogic >> https://github.com/ferhacks
-*El archivo original del MysticBot-MD fue liberado en mayo del 2024 aceptando su liberacion*
-El codigo de este archivo fue parchado en su momento por:
+/*⚠ ЗАПРЕЩЕНО РЕДАКТИРОВАТЬ ⚠
+Этот код был изменен, адаптирован и улучшен
+- РейЕндимион >> https://github.com/ReyEndymion
+Код этого файла вдохновлен исходным кодом:
+- Эйден_нотлогический >> https://github.com/ferhacks
+*Исходный файл MysticBot-MD был выпущен в мае 2024 года, приняв его релиз*
+Код для этого файла был в свое время исправлен:
 - BrunoSobrino >> https://github.com/BrunoSobrino
-Contenido adaptado para GataBot-MD por:
+Контент, адаптированный для GataBot-MD компанией:
 - GataNina-Li >> https://github.com/GataNina-Li
 - elrebelde21 >> https://github.com/elrebelde21
 */
@@ -81,7 +81,7 @@ fs.mkdirSync(pathGataJadiBot, { recursive: true })}
 try {
 args[0] && args[0] != undefined ? fs.writeFileSync(pathCreds, JSON.stringify(JSON.parse(Buffer.from(args[0], "base64").toString("utf-8")), null, '\t')) : ""
 } catch {
-conn.reply(m.chat, `*Use correctamente el comando:* \`${usedPrefix + command} code\``, m)
+conn.reply(m.chat, `*Используйте правильную команду:* \`${usedPrefix + command} код\``, m)
 return
 }
 
@@ -139,7 +139,7 @@ if (/web|desktop|unknown/i.test(dispositivo)) {
 txtCode = await conn.sendMessage(m.chat, { image: { url: 'https://qu.ax/wyUjT.jpg' || gataMenu.getRandom() }, caption: rtx2.trim() + '\n' + drmer.toString("utf-8") }, { quoted: m })
 codeBot = await m.reply(secret);
 } else {
-txtCode = await conn.sendButton(m.chat, rtx2.trim() + '\n' + drmer.toString("utf-8"), wm + `\n*Código:* ${secret}`, 'https://qu.ax/wyUjT.jpg' || gataMenu.getRandom(), null,  [[`Скопировать код`, секрет]], null, null, m)
+txtCode = await conn.sendButton(m.chat, rtx2.trim() + '\n' + drmer.toString("utf-8"), wm + `\n*Код:* ${secret}`, 'https://qu.ax/wyUjT.jpg' || gataMenu.getRandom(), null,  [[`Скопировать код`, секрет]], null, null, m)
 }} else {
 txtCode = await conn.sendMessage(m.chat, { image: { url: 'https://qu.ax/wyUjT.jpg' || gataMenu.getRandom() }, caption: rtx2.trim() + '\n' + drmer.toString("utf-8") }, { quoted: m })
 codeBot = await m.reply(secret);
